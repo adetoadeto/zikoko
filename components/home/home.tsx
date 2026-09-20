@@ -1,22 +1,21 @@
-import Categories from "./categories"
+import PageWrapper from "../wrappers/page-wrapper"
 import Main from "./main/main"
+import Categories from "./categories"
 import Latest from "./latest"
 import TakeQuiz from "./take-quiz"
 import Shows from "./shows"
 import PartnerContent from "./partner-content"
-import SectionWrapper from "../section-wrapper"
-
 
 const Home = () => {
     return (
-        <SectionWrapper>
+        <PageWrapper>
             <Main />
             <Categories />
             <Latest />
             <TakeQuiz />
             <Shows />
             <PartnerContent />
-        </SectionWrapper>
+        </PageWrapper>
     )
 }
 

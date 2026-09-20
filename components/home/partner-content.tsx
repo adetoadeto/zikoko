@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import announcerImg from "@/public/partner.png"
 
 const PartnerContent = () => {
@@ -8,13 +9,13 @@ const PartnerContent = () => {
                 <p className="uppercase text-xs text-gray-300">partner content: announcements</p>
                 <p className="font-heading text-3xl/normal font-semibold">Opportunities, products and services from brands we love.</p>
                 <div className="flex gap-4 items-center">
-                    <button className="bg-white text-purple-800 font-semibold rounded-md px-3 py-2 flex gap-2 items-center w-fit"><span>See what's new</span><i className="fa-solid fa-arrow-up rotate-45"></i></button>
-                    <button className="bg-purple-700 text-white font-semibold rounded-md py-2 px-3 flex gap-2 items-center w-fit"><span>Partner with us</span><i className="fa-solid fa-handshake"></i></button>
+                    <Link href="/partners-announcements" className="bg-white text-purple-800 font-semibold rounded-md px-3 py-2 flex gap-2 items-center w-fit hover:text-sm"><span>See what's new</span><i className="fa-solid fa-arrow-up rotate-45"></i></Link>
+                    <button className="bg-purple-950 text-white font-semibold rounded-md py-2 px-3 flex gap-2 items-center w-fit hover:text-sm"><span>Partner with us</span><i className="fa-solid fa-handshake"></i></button>
                 </div>
 
             </div>
-            <div className="flex items-center">
-                <Image src={announcerImg} alt="vector image of a male with a megaphone" height={350} width={350} className=" " />
+            <div>
+                <Image src={announcerImg} alt="vector image of a male with a megaphone" height={350} width={350} className="animate-shake" />
             </div>
         </div>
     )
