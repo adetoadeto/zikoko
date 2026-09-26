@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { fraunces, manrope, } from "@/lib/fonts";
-import "./globals.css";
 import Navbar from "@/components/nav/nav";
 import Footer from "@/components/footer/footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Home | Zikoko!",
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-screen overflow-x-hidden text-base text-neutral-800 font-body">
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

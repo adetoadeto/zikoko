@@ -5,7 +5,7 @@ const HorizontalScrollWrapper = ({ heading, icon, href, children }: ScrollWrappe
     return (
         <div>
             <SubHeading title={heading} icon={icon} text={href} />
-            <div className="h-70 mt-5 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-4 overflow-y-scroll">
+            <div className="h-70 mt-5 px-4 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-article-cards overflow-y-scroll">
                 {children}
             </div>
         </div>

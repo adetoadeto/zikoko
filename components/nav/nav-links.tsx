@@ -9,7 +9,7 @@ const NavLinks = () => {
     const moreNavLinks = categories.slice(5)
 
     return (
-        <ul className="flex items-center gap-10 font-semibold">
+        <ul className="hidden items-center gap-10 font-semibold xl:flex">
             {navLinks.map(item => <NavLink key={item.name} {...item} />)}
 
             <li className="relative hover:text-purple-600 hover:cursor-pointer" onClick={() => setMoreOpen(prev => !prev)}><span>More</span> <i className={`fa-solid ${moreOpen ? 'fa-caret-up' : 'fa-caret-down'} text-purple-600 text-lg`}></i></li>

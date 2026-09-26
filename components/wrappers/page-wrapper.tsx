@@ -1,8 +1,8 @@
-import { PageWrapperProps } from "../../lib/interface"
+import { ChildrenProps } from "../../lib/interface"
 
-const PageWrapper = ({ children }: PageWrapperProps) => {
+const PageWrapper = ({ children }: ChildrenProps) => {
     return (
-        <section className="px-spacing-x pt-spacing-t flex flex-col gap-10">
+        <section className="px-spacing-x-mobile xl:px-spacing-x pt-spacing-t flex flex-col gap-10">
             {children}
         </section>
     )

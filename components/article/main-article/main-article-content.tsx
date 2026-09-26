@@ -3,7 +3,7 @@ import { MainArticleContentProps } from "@/lib/interface"
 const MainArticleContent = ({ img }: MainArticleContentProps) => {
     return (
         <div>
-            <div className="h-70 w-full rounded-lg my-7 bg-cover bg-center shadow-[0_0_9px] shadow-black/40" style={{ backgroundImage: `url(${img.src})` }}>
+            <div className="h-90 w-full rounded-lg my-7 bg-cover bg-top shadow-[0_0_9px] shadow-black/40" style={{ backgroundImage: `url(${img.src})` }}>
             </div>
 
             <div className="flex flex-col gap-4 leading-7">

@@ -1,11 +1,12 @@
+import slugify from "slugify"
 import { articles } from "./articles";
 
-export const textShortener = (text: string) => {
+export const textShortener = (text: string, length?: number) => {
     if (!text) {
         return
     }
 
-    const permittedLength = 55
+    const permittedLength = length ? length : 35
     const textLength = text.length
     let formattedText;
 
@@ -18,11 +19,16 @@ export const textShortener = (text: string) => {
     return formattedText
 }
 
-export const generateSlug = (title: string) => {
-    if (!title) {
+export const generateSlug = (text: string) => {
+    if (!text) {
         return
     }
-    const slug = title.split(" ").join("-")
+    const slug = slugify(text, {
+        lower: true,
+        strict: true,
+        trim: true,
+        replacement: "-"
+    })
     return slug
 }
 
@@ -55,6 +61,39 @@ export const getLatestArticles = () => {
         }
     }
     return latestArticles
+}
+
+export const getRelatedArticles = (title: string) => {
+    let relatedArticles;
+
+    for (const [key, value] of Object.entries(articles)) {
+        const categories = value
+        for (const [key, value] of Object.entries(categories)) {
+            const article = value.filter(item => generateSlug(item.title) === generateSlug(title))[0]
+            if (article) {
+                relatedArticles = JSON.parse(JSON.stringify(value.filter(item => item.title !== article.title && item.category === article.category)))
+            }
+        }
+    }
+    return relatedArticles.slice(0, 4)
+}
+
+export const getArticle = (title: string) => {
+    getRelatedArticles(title)
+    let article;
+    for (const [key, value] of Object.entries(articles)) {
+        const categories = value
+
+        for (const [key, value] of Object.entries(categories)) {
+            const result = value.filter(item => generateSlug(item.title) === generateSlug(title))
+
+            if (result.length > 0) {
+                article = JSON.parse(JSON.stringify(result))
+                break
+            }
+        }
+    }
+    return article
 }
 
 export const getByCategory = (category: string) => {
@@ -95,7 +134,7 @@ export const getBySubCategory = (category: string) => {
 
     const articles = getByCategory(category)
 
-    const data = articles?.reduce<Record<string, string | any>>((acc, currVal) => {
+    const data: any = articles?.reduce<Record<string, string | any>>((acc, currVal) => {
         const existing = acc[currVal.subCategory]
 
         if (!existing) {
@@ -111,22 +150,5 @@ export const getBySubCategory = (category: string) => {
         newArray.push({ heading: key, articles: value })
     }
     return newArray
-}
-
-export const getArticle = (title: string) => {
-    let article;
-    for (const [key, value] of Object.entries(articles)) {
-        const categories = value
-
-        for (const [key, value] of Object.entries(categories)) {
-            const result = value.filter(item => generateSlug(item.title) === title)
-            if (result) {
-                article = JSON.parse(JSON.stringify(result))
-                break
-            }
-
-        }
-    }
-    return article
 }
 

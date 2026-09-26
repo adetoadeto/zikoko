@@ -4,7 +4,7 @@ import MainArticleHeader from "./main-article-header"
 const MainArticle = async ({article}:Record<string,any>) => {
 
     return (
-        <div className="w-[70%]">
+        <div className="lg:w-[70%]">
             <article>
                 <MainArticleHeader title={article.title}/>
                 <MainArticleContent img={article.img}/>

@@ -4,7 +4,8 @@ import { colors } from "./colors"
 export type Color = keyof typeof colors
 
 export interface ArticleNavProps {
-    path: string[]
+    path: string[],
+    href: string,
 }
 
 export interface ArticleCardProps {
@@ -40,6 +41,10 @@ export interface CategoryOverviewProps {
     groupedBySubCategory: GroupBySubCategory[]| undefined
 }
 
+export interface ChildrenProps {
+    children: React.ReactNode
+}
+
 export interface FooterLinksProps {
     item: {
         heading: string,
@@ -64,10 +69,6 @@ export interface NavLinkProps {
     key: any,
     href: string,
     name: string,
-}
-
-export interface PageWrapperProps {
-    children: React.ReactNode
 }
 
 export interface ReadTimeProps {

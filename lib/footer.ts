@@ -12,12 +12,12 @@ export const footerLinks = [
         heading: "more",
         lists: more
     },
-    // {
-    //     heading: "company",
-    //     lists: ["about us", "advertise", "careers", "contact us", "newsroom"]
-    // },
-    // {
-    //     heading: "help",
-    //     lists: ["faq", "privacy policy", "terms of use"]
-    // },
+    {
+        heading: "company",
+        lists: ["about us", "advertise", "careers", "contact us", "newsroom"]
+    },
+    {
+        heading: "help",
+        lists: ["faq", "privacy policy", "terms of use"]
+    },
 ]

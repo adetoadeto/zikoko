@@ -7,7 +7,7 @@ const SideCard = () => {
     const featuredArticles = getFeaturedArticles().slice(1, 4)
     
     return (
-        <div className="flex flex-col justify-between gap-4 w-1/3">
+        <div className="hidden xl:flex flex-col justify-between gap-4 w-1/3">
             {featuredArticles.map((item, index) => {
                 const title = textShortener(item.title)
                 const titleSlug = generateSlug(item.title)

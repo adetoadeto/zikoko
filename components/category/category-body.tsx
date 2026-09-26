@@ -20,7 +20,10 @@ const CategoryBody = ({ slug }: CategoryBodyProps) => {
     const groupedBySubCategory = getBySubCategory(slug)
 
     const handleOnSelectSubCategory = (selection: string, icon: string) => {
-        setSelectedSubCategory({name: selection, icon})
+        if (selection === selectedSubCategory.name) {
+            return setSelectedSubCategory({ name: "", icon: "" })
+        }
+        setSelectedSubCategory({ name: selection, icon })
     }
 
     return (

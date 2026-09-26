@@ -17,6 +17,7 @@
     --color-purple-950: #1C0327;
 
     --padding-spacing-x: 25px;
+    --padding-spacing-x-mobile: 10px;
     --padding-spacing-t: 80px;
 
     --radius-button: 6px;
@@ -25,17 +26,28 @@
     --animate-shake: shake 2s linear infinite alternate;
     --animate-shift: shift 0.3s linear 2 alternate;
     --animate-duration-transition: 3s;
+
     --scale-down: 95%;
     --translate-up: -13px;
+    
+    --gap-article-cards: 15px;
 }
 
 @utility no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-
     &::-webkit-scrollbar {
         visibility: hidden;
     }
+}
+
+@utility box-shadow {
+    border: 1px solid rgba(0, 0, 0, 0.10);;
+    box-shadow: -4px 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+@utility card-width {
+    min-width: 200px;
 }
 
 @keyframes slideIn {

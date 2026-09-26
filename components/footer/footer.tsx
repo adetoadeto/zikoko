@@ -2,15 +2,15 @@ import Image from "next/image"
 import { footerLinks } from "../../lib/footer"
 import { socials } from "../../lib/socials"
 import FooterLinks from "./footer-links"
-import Subscribe from "../newsletter/subscribe"
+import NewsLetterBox from "../newsletter/newsletter-box"
 import brandLogo from "@/public/logo/logo_white.png"
 
 const Footer = () => {
     const year = new Date().getFullYear()
 
     return (
-        <footer className="px-spacing-x py-8 bg-purple-950 mt-8 text-white flex justify-between">
-            <div className="flex flex-col justify-between w-1/3">
+        <footer className="mt-8 px-spacing-x py-8 bg-purple-950 text-white">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-10 items-start" >
                 <div className="flex flex-col gap-5">
                     <Image src={brandLogo} alt="zikoko logo" height={200} width={200} />
                     <p>Zikoko is a big cabal media brand</p>
@@ -20,10 +20,10 @@ const Footer = () => {
                         )}
                     </div>
                 </div>
-                <p> &copy; 2018 - {year} Zikoko. All rights reserved. </p>
+                <div className="flex justify-between gap-10">{footerLinks.map(item => <FooterLinks item={item} />)}</div>
+                <div className=""><NewsLetterBox /></div>
             </div>
-            <div className="flex gap-35 w-1/3">{footerLinks.map(item => <FooterLinks item={item} />)}</div>
-            <div className="w-1/3"><Subscribe /></div>
+            <p className="mt-10 text-gray-300"> &copy; 2018 - {year} Zikoko. All rights reserved. </p>
         </footer>
     )
 }

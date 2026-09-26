@@ -3,6 +3,16 @@ eugene katie
 david layo
 somto chinonso
 
-500 error page
+
 author's image is wrong
 article date not present in article card
+our mission: could be like a card dangling from the top of the page like the air freshner that dangles but you can dismiss it
+add filter by year in subcategory page
+partner with us (advertise with us) has a dedicated page
+privacy policy page
+message generator
+add overrall animation effect to page
+more posts in article page
+
+for latest shows in shows you can add the pause button and when clicked takes you to the show
+the more box should also fold in when closed and spread when opened (animation)

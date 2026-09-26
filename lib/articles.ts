@@ -29,14 +29,14 @@ import herImg1 from "@/public/categories/her/img1.png"
 import herImg2 from "@/public/categories/her/img2.png"
 import herImg3 from "@/public/categories/her/img3.png"
 import herImg4 from "@/public/categories/her/img4.png"
-import herImg5 from "@/public/categories/her/img1.png"
+import herImg5 from "@/public/categories/her/img5.png"
 import herImg6 from "@/public/categories/her/img1.png"
 import herImg7 from "@/public/categories/her/img1.png"
 
 import manDemImg1 from "@/public/categories/mandem/img1.png"
-import manDemImg2 from "@/public/categories/mandem/img1.png"
-import manDemImg3 from "@/public/categories/mandem/img1.png"
-import manDemImg4 from "@/public/categories/mandem/img1.png"
+import manDemImg2 from "@/public/categories/mandem/img2.jpg"
+import manDemImg3 from "@/public/categories/mandem/img3.png"
+import manDemImg4 from "@/public/categories/mandem/img4.png"
 import manDemImg5 from "@/public/categories/mandem/img1.png"
 import manDemImg6 from "@/public/categories/mandem/img1.png"
 import manDemImg7 from "@/public/categories/mandem/img1.png"
@@ -117,14 +117,14 @@ const her1 = new Article(herImg1, "her", "purple", "talk true", "What It’s Lik
 const her2 = new Article(herImg4, "her", "purple", "talk true", "The Reality of Dating as a Modern African Woman", "10", "david layo", "Sept 2th, 2018")
 const her3 = new Article(herImg3, "her", "purple", "talk true", "African Women and Money: From Financial Struggles to Independence", "10", "eugene katie", "Jan 9th, 2022", true)
 const her4 = new Article(herImg5, "her", "purple", "talk true", "What Nobody Tells You About Becoming an African Woman", "10", "somto chinonso", "Dec 12th, 2024")
-const her5 = new Article(herImg5, "her", "purple", "what she said", "Women Who Started Over and Built New Lives", "10", "joy ahmed", "Feb 15th, 2021")
-const her6 = new Article(herImg5, "her", "purple", "what she said", "Women Who Chose Themselves Over Societal Expectations", "10", "david layo", "June 14th, 2025")
+const her5 = new Article(herImg3, "her", "purple", "what she said", "Women Who Started Over and Built New Lives", "10", "joy ahmed", "Feb 15th, 2021")
+const her6 = new Article(herImg3, "her", "purple", "what she said", "Women Who Chose Themselves Over Societal Expectations", "10", "david layo", "June 14th, 2025")
 const her7 = new Article(herImg2, "her", "purple", "what she said", "The Pressure to Get Married: Stories African Women Rarely Tell", "10", "eugene katie", "July 16th, 2022")
 
-const mandem1 = new Article(manDemImg1, "man-dem", "blue", "man like", "Men Who Had to Start Their Lives All Over Again", "10", "joy ahmed", "April 6th, 2023")
-const mandem2 = new Article(manDemImg2, "man-dem", "blue", "man like", "The Men Who Became Fathers Before They Felt Ready", "10", "david layo", "Sept 2th, 2018")
-const mandem3 = new Article(manDemImg3, "man-dem", "blue", "man like", "From Hustle to Success: Men Who Built Something From Nothing", "10", "eugene katie", "Jan 9th, 2022")
-const mandem4 = new Article(manDemImg4, "man-dem", "blue", "man like", "What It’s Really Like Being a Man Who Lives Alone", "10", "somto chinonso", "Dec 12th, 2024")
+const mandem1 = new Article(manDemImg4, "man-dem", "blue", "man like", "Men Who Had to Start Their Lives All Over Again", "10", "joy ahmed", "April 6th, 2023")
+const mandem2 = new Article(manDemImg3, "man-dem", "blue", "man like", "The Men Who Became Fathers Before They Felt Ready", "10", "david layo", "Sept 2th, 2018")
+const mandem3 = new Article(manDemImg1, "man-dem", "blue", "man like", "From Hustle to Success: Men Who Built Something From Nothing", "10", "eugene katie", "Jan 9th, 2022")
+const mandem4 = new Article(manDemImg2, "man-dem", "blue", "man like", "What It’s Really Like Being a Man Who Lives Alone", "10", "somto chinonso", "Dec 12th, 2024")
 const mandem5 = new Article(manDemImg5, "man-dem", "blue", "my bro", "I Was My Best Friend’s Best Man, Then We Stopped Speaking", "10", "joy ahmed", "Feb 15th, 2021", true)
 const mandem6 = new Article(manDemImg6, "man-dem", "blue", "my bro", "My Best Friend Borrowed ₦500k From Me and Our Friendship Never Recovered", "10", "david layo", "June 14th, 2025")
 const mandem7 = new Article(manDemImg7, "man-dem", "blue", "my bro", "I Found Out My Best Friend Was Dating My Ex Behind My Back", "10", "eugene katie", "July 16th, 2022")

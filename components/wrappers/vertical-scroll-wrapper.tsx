@@ -6,7 +6,7 @@ const VerticalScrollWrapper = ({ heading, icon, href, children }: ScrollWrapperP
     <div>
       <SubHeading title={heading} icon={icon} text={href} />
       <div className="pt-6 pb-3 overflow-x-scroll no-scrollbar">
-        <div className="flex gap-4">
+        <div className="flex gap-article-cards">
           {children}
         </div>
       </div>
