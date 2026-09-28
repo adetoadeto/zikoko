@@ -1,5 +1,6 @@
 import slugify from "slugify"
 import { articles } from "./articles";
+import { CategoryOverviewProps } from "./interface";
 
 export const textShortener = (text: string, length?: number) => {
     if (!text) {
@@ -145,7 +146,7 @@ export const getBySubCategory = (category: string) => {
         return acc
     }, {});
 
-    const newArray = []
+    const newArray: any = []
     for (const [key, value] of Object.entries(data)) {
         newArray.push({ heading: key, articles: value })
     }

@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { generateSlug } from "@/lib/utils"
+import { RelatedArticlesProps } from "@/lib/interface"
 
-const RelatedArticles = ({ relatedArticles }) => {
+const RelatedArticles = ({ relatedArticles }: RelatedArticlesProps) => {
 
     return (
         <div className=" bg-white border border-neutral-300 rounded-lg p-5">

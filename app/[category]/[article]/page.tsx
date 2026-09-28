@@ -20,6 +20,7 @@ const Article = async ({ params }: Slug) => {
     }
     const href = generateSlug(specificArticle.category)!
     const relatedArticles = getRelatedArticles(article)
+    console.log(relatedArticles)
 
     return (
         <PageWrapper>

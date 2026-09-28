@@ -10,7 +10,7 @@ const NavLinks = () => {
 
     return (
         <ul className="hidden items-center gap-10 font-semibold xl:flex">
-            {navLinks.map(item => <NavLink key={item.name} {...item} />)}
+            {navLinks.map(item => <NavLink key={item.name} href={item.href} name={item.name} />)}
 
             <li className="relative hover:text-purple-600 hover:cursor-pointer" onClick={() => setMoreOpen(prev => !prev)}><span>More</span> <i className={`fa-solid ${moreOpen ? 'fa-caret-up' : 'fa-caret-down'} text-purple-600 text-lg`}></i></li>
             <ul className={`${moreOpen ? "visible" : "hidden"} absolute w-50 top-18 left-170 bg-white border border-purple-300 rounded-xl text-center`} onMouseLeave={() => setMoreOpen(false)}>

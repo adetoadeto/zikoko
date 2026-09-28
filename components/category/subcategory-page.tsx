@@ -10,7 +10,7 @@ const SubCategoryPage = ({ selectedSubCategory, groupedBySubCategory }: SubCateg
   return (
     <div>
       <SubHeading title={articles?.heading} icon={selectedSubCategory.icon} />
-      <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-article-cards">
+      <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-article-cards">
         {articles?.articles.map(item => <ArticleCard key={item.title} item={item} noTag={true} />)}
       </div>
     </div>

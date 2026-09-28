@@ -7,7 +7,7 @@ import NewsLetterIcon from "./newsletter-icon"
 const MobileNav = () => {
     const [navIsOpen, setNavIsOpen] = useState(false)
 
-    const handleBackdropClick = (event) => {
+    const handleBackdropClick = (event: any) => {
         if (event.target.id === "backdrop") {
             setNavIsOpen(false)
         }

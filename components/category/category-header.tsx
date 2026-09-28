@@ -12,5 +12,3 @@ const CategoryHeader = ({ subCategories, selectedSubCategory, onSelectSubCategor
 }
 
 export default CategoryHeader
-
-// clicking an header twice unselects it

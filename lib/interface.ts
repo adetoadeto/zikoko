@@ -66,13 +66,16 @@ export interface MainArticleContentProps {
 }
 
 export interface NavLinkProps {
-    key: any,
     href: string,
     name: string,
 }
 
 export interface ReadTimeProps {
     time: string
+}
+
+export interface RelatedArticlesProps {
+    relatedArticles: Record<string, any>[]
 }
 
 export interface ScrollWrapperProps {

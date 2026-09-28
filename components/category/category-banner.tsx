@@ -11,7 +11,7 @@ const CategoryBanner = ({ category }: BannerProps) => {
   }
 
   return (
-    <div className="relative h-100 w-full bg-black/70 bg-blend-difference bg-cover bg-center md:bg-top mb-9" style={{ backgroundImage: `url(${content?.bannerImg.src})`, backgroundBlendMode: "darken"}}>
+    <div className="relative h-100 w-full bg-black/70 md:bg-transparent bg-blend-darken bg-cover bg-center md:bg-top mb-9" style={{ backgroundImage: `url(${content?.bannerImg.src})`}}>
       <div className="h-full  md:bg-transparent md:w-2/3 px-spacing-x-mobile md:px-spacing-x flex flex-col gap-7 justify-center items-center md:items-start text-white text-lg text-center md:text-start wrap-break-word">
         <h2 className="text-7xl/20 font-heading uppercase">{content?.name}</h2>
         <p className="sm:w-2/3 leading-9">{content?.bannerDescription}.</p>

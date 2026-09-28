@@ -1,4 +1,3 @@
-import { getByCategory} from "@/lib/utils"
 import { CategoryOverviewProps } from "@/lib/interface"
 
 import ArticleCard from "../article/article-card"
