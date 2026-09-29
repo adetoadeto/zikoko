@@ -25,7 +25,7 @@ const CategoryPage = async ({ params }: Slug) => {
   const { category } = await params
 
   return (
-    <section className="min-h-screen pt-spacing-t">
+    <section className="min-h-screen pt-spacing-t-mobile xl:pt-spacing-t">
       <CategoryBanner slug={category} />
 
        <CategoryBody slug={category}/>

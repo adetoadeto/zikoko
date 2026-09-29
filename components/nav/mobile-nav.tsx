@@ -7,9 +7,10 @@ import NewsLetterIcon from "./newsletter-icon"
 const MobileNav = () => {
     const [navIsOpen, setNavIsOpen] = useState(false)
 
-    const handleBackdropClick = (event: any) => {
-
-        setNavIsOpen(false)
+    const handleBackdropClick = (event: any, type?:string) => {
+        if (event.target.id === "backdrop" || type === "list") {
+            setNavIsOpen(false)
+        }
 
     }
 
@@ -20,9 +21,9 @@ const MobileNav = () => {
                 <button className="relative text-3xl text-purple-600" onClick={() => setNavIsOpen(prevState => !prevState)}><i className="fa-solid fa-bars"></i></button>
             </div>
 
-            <aside id="backdrop" className={`h-screen w-full absolute top-15 left-0 bg-black/90 xl:hidden ${navIsOpen ? "visible" : "hidden"}`} onClick={handleBackdropClick}>
-                <ul className="bg-white h-screen w-[50%] md:w-[35%] absolute right-0 pt-5 px-2 flex flex-col items-center gap-2 text-center text-xl overflow-scroll no-scrollbar">
-                    {categories.map(item => <><li onClick={handleBackdropClick}><Link href={item.href} className="block w-full p-3 text-purple-800 font-semibold lowercase hover:bg-purple-700 hover:text-white rounded-2xl">{item.name}</Link></li> <hr className="w-full border border-purple-50 " /></>)}
+            <aside id="backdrop" className={`h-screen w-full absolute top-15 left-0 bg-black/90 xl:hidden ${navIsOpen ? "visible" : "hidden"}`} onClick={()=>handleBackdropClick(event)}>
+                <ul className="bg-white h-screen w-[50%] md:w-[35%] absolute right-0 pt-5 px-2 pb-40 flex flex-col items-center gap-2 text-center text-xl overflow-scroll no-scrollbar">
+                    {categories.map(item => <><li onClick={()=>handleBackdropClick(event, "list")}><Link href={item.href} className="block w-full p-3 text-purple-800 font-semibold lowercase hover:bg-purple-700 hover:text-white rounded-2xl">{item.name}</Link></li> <hr className="w-full border border-purple-50 " /></>)}
                     <div className="mt-5 w-full">
                         <NewsLetterIcon />
                     </div>
