@@ -15,7 +15,7 @@ const CategoryOverview = ({ category, groupedBySubCategory }: CategoryOverviewPr
             </VerticalScrollWrapper>
 
             {groupedBySubCategory?.map((item) =>
-                <VerticalScrollWrapper heading={item.heading} icon="fire" key={item.heading}>
+                <VerticalScrollWrapper heading={item.heading} icon="book-open" key={item.heading}>
                     {item.articles.map((item: any) => <ArticleCard key={item.title} item={item} isSubCategory={category ? true : false} noTag={true} />
                     )}
                 </VerticalScrollWrapper>)}

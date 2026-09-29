@@ -13,7 +13,7 @@ const Navbar = () => {
         <>
             <OurMission />
             <nav className="fixed w-full z-2 bg-white flex justify-between items-center px-spacing-x py-5 border-b border-neutral-100">
-                <Link href="/"><Image src={logo} alt="Zikoko logo" className="h-7 object-contain w-fit" /></Link>
+                <Link href="/"><Image src={logo} alt="Zikoko logo" className="h-4 sm:h-7 object-contain w-fit" /></Link>
                 <NavLinks />
                 <div className="hidden items-center gap-3 xl:flex">
                     <form className="px-3 flex items-center border border-gray-300 rounded-md">

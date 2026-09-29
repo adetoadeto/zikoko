@@ -27,11 +27,11 @@ const CategoryBody = ({ slug }: CategoryBodyProps) => {
     }
 
     return (
-        <>
+        <div className="min-[480px]:pt-20 px-spacing-x-mobile xl:px-spacing-x">
             <CategoryHeader subCategories={subCategories?.subCategories} selectedSubCategory={selectedSubCategory} onSelectSubCategory={handleOnSelectSubCategory} />
             {!selectedSubCategory.name && <CategoryOverview category={slug} groupedBySubCategory={groupedBySubCategory} />}
             {selectedSubCategory.name && <SubCategoryPage selectedSubCategory={selectedSubCategory} groupedBySubCategory={groupedBySubCategory} />}
-        </>
+        </div>
     )
 }
 
