@@ -26,10 +26,10 @@ const CategoryPage = async ({ params }: Slug) => {
 
   return (
     <section className="min-h-screen pt-spacing-t">
-      <CategoryBanner category={category} />
-      <PageWrapper>
+      <CategoryBanner slug={category} />
+      <div className="px-spacing-x-mobile xl:px-spacing-x min-[480px]:pt-spacing-t">
        <CategoryBody slug={category}/>
-      </PageWrapper>
+      </div>
     </section>
   )
 }

@@ -20,7 +20,7 @@ export interface ArticleTagProps {
 }
 
 export interface BannerProps {
-    category: string
+    slug: string
 }
 
 export interface CategoryHeaderProps {
