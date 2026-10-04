@@ -8,7 +8,7 @@ const CategoryOverview = ({ category, groupedBySubCategory }: CategoryOverviewPr
     const latestArticles = groupedBySubCategory?.map(item => item.articles[0])
 
     return (
-        <div className="flex flex-col gap-15">
+        <div className="flex flex-col gap-10">
             <VerticalScrollWrapper heading="Latest" icon="fire">
                 {latestArticles?.map(item => <ArticleCard key={item.title} item={item} isSubCategory={category ? true : false} />
                 )}

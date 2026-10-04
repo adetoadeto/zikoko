@@ -45,6 +45,11 @@ export interface ChildrenProps {
     children: React.ReactNode
 }
 
+export interface FeaturedCardsProps {
+    featured: Record<string, any>,
+    title: string,
+    titleSlug: string
+}
 export interface FooterLinksProps {
     item: {
         heading: string,

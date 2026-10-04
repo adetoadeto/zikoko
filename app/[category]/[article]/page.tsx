@@ -24,7 +24,7 @@ const Article = async ({ params }: Slug) => {
 
     return (
         <PageWrapper>
-            <div className="mx-2 mt-7">
+            <div className="lg:mx-2 mt-7">
                 <ArticleNav path={[specificArticle.category, specificArticle.subCategory, specificArticle.title]} href={href} />
                 <div className="lg:flex justify-between gap-20 mt-12">
                     <MainArticle article={specificArticle} />

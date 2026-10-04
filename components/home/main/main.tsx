@@ -1,4 +1,4 @@
-import FeaturedCard from "./featured-card"
+import FeaturedCard from "./featured-card/featured-card"
 import SideCard from "./side-card"
 
 const Main = () => {

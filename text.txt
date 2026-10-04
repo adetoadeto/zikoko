@@ -5,7 +5,7 @@ somto chinonso
 
 
 author's image is wrong
-article date not present in article card
+
 add filter by year in subcategory page
 partner with us (advertise with us) has a dedicated page
 privacy policy page

@@ -20,7 +20,7 @@ const ArticleCard = ({ item, isSubCategory, noTag }: ArticleCardProps) => {
                 {/* <ReadTime time={item.duration} /> */}
             </div>
             <div className="h-30 p-3.5 flex flex-col justify-between gap-article-cards">
-                <h3 className="capitalize font-semibold font-heading text-xl">{title}</h3>
+                <h3 className="capitalize font-semibold font-heading text-lg">{title}</h3>
                 <div className="flex items-center gap-5 sm:justify-between">
                 <div className="flex items-center gap-2 ">
                     <div className="h-5 w-5 rounded-[50%]">
