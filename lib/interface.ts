@@ -48,7 +48,7 @@ export interface ChildrenProps {
 export interface FeaturedCardsProps {
     featured: Record<string, any>,
     title: string,
-    titleSlug: string
+    titleSlug: string | undefined
 }
 export interface FooterLinksProps {
     item: {
