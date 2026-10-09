@@ -11,7 +11,7 @@ const NewsLetterPage = () => {
                     <div className="sm:w-[60%] flex flex-col gap-7 justify-between p-2 sm:p-5">
                         <strong className="capitalize text-3xl/11 font-heading text-purple-900">get more zikoko goodness in your mail</strong>
                         <p>Subscribe to our newsletters and never miss any of the action</p>
-                        <ul className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-4">
+                        <ul className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-4">
                             <li className="flex items-center gap-2">
                                 <input type="checkbox" className="bg-amber-400" />
                                 <label htmlFor="">Zikoko Daily</label>

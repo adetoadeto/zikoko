@@ -11,7 +11,8 @@ export interface ArticleNavProps {
 export interface ArticleCardProps {
     item: Record<string, any>,
     isSubCategory?: Boolean,
-    noTag?: Boolean
+    noTag?: Boolean,
+    extraStyle?: any
 }
 
 export interface ArticleTagProps {
@@ -38,7 +39,8 @@ export interface CategoryBodyProps {
 
 export interface CategoryOverviewProps {
     category: string,
-    groupedBySubCategory: GroupBySubCategory[]| undefined
+    groupedBySubCategory: GroupBySubCategory[]| undefined,
+    onSelectSubCategory: (selection: string, icon:string ) => void
 }
 
 export interface ChildrenProps {

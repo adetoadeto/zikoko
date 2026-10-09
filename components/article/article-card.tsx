@@ -5,7 +5,7 @@ import { generateSlug, textShortener } from "../../lib/utils"
 import ArticleTag from "./article-tag"
 import ReadTime from "../read-time"
 
-const ArticleCard = ({ item, isSubCategory, noTag }: ArticleCardProps) => {
+const ArticleCard = ({ item, isSubCategory, noTag, extraStyle }: ArticleCardProps) => {
 
     const useSubCategoryTag = Boolean(isSubCategory)
     const articleTitle = item.title
@@ -14,7 +14,7 @@ const ArticleCard = ({ item, isSubCategory, noTag }: ArticleCardProps) => {
     const categorySlug = generateSlug(item.category)
 
     return (
-        <Link href={`/${categorySlug}/${titleSlug}`} className="h-70 card-width rounded-xl box-shadow transition-transform animate-duration-transition hover:translate-y-up">
+        <Link href={`/${categorySlug}/${titleSlug}`} className={`h-70 card-width rounded-xl box-shadow transition-transform animate-duration-transition hover:translate-y-up ${extraStyle}`}>
             <div className="bg-cover bg-top rounded-t-xl p-3.5 flex flex-col justify-between h-40 bg-purple-50" style={{ backgroundImage: `url(${item.img.src})` }}>
                 {!noTag && <ArticleTag tagColor={item.categoryColor} tagName={useSubCategoryTag ? item.subCategory : item.category} />}
                 {/* <ReadTime time={item.duration} /> */}
@@ -22,16 +22,16 @@ const ArticleCard = ({ item, isSubCategory, noTag }: ArticleCardProps) => {
             <div className="h-30 p-3.5 flex flex-col justify-between gap-article-cards">
                 <h3 className="capitalize font-semibold font-heading text-lg">{title}</h3>
                 <div className="flex items-center gap-5 sm:justify-between">
-                <div className="flex items-center gap-2 ">
-                    <div className="h-5 w-5 rounded-[50%]">
-                        <Image src={item.img} alt="author's picture" className="h-full w-full rounded-full object-cover" />
+                    <div className="flex items-center gap-2 ">
+                        <div className="h-5 w-5 rounded-[50%]">
+                            <Image src={item.img} alt="author's picture" className="h-full w-full rounded-full object-cover" />
+                        </div>
+                        <p className="capitalize text-xs text-gray-600">{item.author}</p>
                     </div>
-                    <p className="capitalize text-xs text-gray-600">{item.author}</p>
+                    <p className="capitalize text-xs text-gray-600">{item.date}</p>
                 </div>
-                <p className=" capitalize text-xs text-gray-600">{item.date}</p>
-            </div>
 
-        </div>
+            </div>
         </Link >
     )
 }

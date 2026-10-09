@@ -7,7 +7,7 @@ const RelatedArticles = ({ relatedArticles }: RelatedArticlesProps) => {
     return (
         <div className=" bg-white border border-neutral-300 rounded-lg p-5">
             <strong className="text-xl capitalize font-bold font-heading">related articles</strong>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] lg:flex flex-col gap-5 mt-6">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] lg:flex flex-col gap-5 mt-6">
                 {relatedArticles.map(item => {
                     const title = generateSlug(item.title)
                     return (

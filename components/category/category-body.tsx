@@ -20,6 +20,7 @@ const CategoryBody = ({ slug }: CategoryBodyProps) => {
     const groupedBySubCategory = getBySubCategory(slug)
 
     const handleOnSelectSubCategory = (selection: string, icon: string) => {
+        console.log(selection)
         if (selection === selectedSubCategory.name) {
             return setSelectedSubCategory({ name: "", icon: "" })
         }
@@ -29,7 +30,7 @@ const CategoryBody = ({ slug }: CategoryBodyProps) => {
     return (
         <div className="min-[480px]:pt-20 px-spacing-x-mobile xl:px-spacing-x">
             <CategoryHeader subCategories={subCategories?.subCategories} selectedSubCategory={selectedSubCategory} onSelectSubCategory={handleOnSelectSubCategory} />
-            {!selectedSubCategory.name && <CategoryOverview category={slug} groupedBySubCategory={groupedBySubCategory} />}
+            {!selectedSubCategory.name && <CategoryOverview category={slug} groupedBySubCategory={groupedBySubCategory} onSelectSubCategory={handleOnSelectSubCategory} />}
             {selectedSubCategory.name && <SubCategoryPage selectedSubCategory={selectedSubCategory} groupedBySubCategory={groupedBySubCategory} />}
         </div>
     )
