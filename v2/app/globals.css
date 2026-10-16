@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+    --font-heading: var(--font-fraunces);
+    --font-body: var(--manrope);
+
+    --color-purple-50: #F2E9F7;
+    --color-purple-100: #EEDEF7;
+    --color-purple-200: #DDBDEE;
+    --color-purple-300: #CC9CE4;
+    --color-purple-400: #BB7BDA;
+    --color-purple-500: #AA57CE;
+    --color-purple-600: #982BC2;
+    --color-purple-700: #761F98;
+    --color-purple-800: #56146F;
+    --color-purple-900: #380A49;
+    --color-purple-950: #1C0327;
+
+    --padding-spacing-x: 25px;
+    --padding-spacing-x-mobile: 10px;
+    --padding-spacing-t: 80px;
+    --padding-spacing-t-mobile: 60px;
+
+    --radius-button: 6px;
+
+    --animate-navlinks: slideIn 1s ease-in-out;
+    --animate-shake: shake 2s linear infinite alternate;
+    --animate-shift: shift 0.3s linear 2 alternate;
+    --animate-duration-transition: 3s;
+
+    --scale-down: 95%;
+    --translate-up: -13px;
+    
+    --gap-article-cards: 15px;
+}
+
+@utility no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        visibility: hidden;
+    }
+}
+
+@utility box-shadow {
+    border: 1px solid rgba(0, 0, 0, 0.10);;
+    box-shadow: -4px 4px 0 rgba(0, 0, 0, 0.10);
+}
+
+@utility card-width {
+    min-width: 250px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-10);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(10);
+    }
+
+    50% {
+        transform: rotate(-10);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
