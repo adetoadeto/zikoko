@@ -43,7 +43,7 @@ const Article = async ({ params }: Slug) => {
                     <MainArticle article={currentArticle} />
                     <div className="mt-10 lg:w-[30%] lg:mt-0 flex flex-col gap-7">
                         <Author author={currentArticle?.author} />
-                        {/* <RelatedArticles relatedArticles={relatedArticles} /> */}
+                        <RelatedArticles categoryId={currentArticle.category._id} />
                         <NewsLetterBox />
                     </div>
                 </div>

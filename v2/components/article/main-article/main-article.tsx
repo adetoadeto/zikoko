@@ -2,7 +2,7 @@ import { MainArticleProps } from "@/lib/interface-types"
 import MainArticleContent from "./main-article-content"
 import MainArticleHeader from "./main-article-header"
 
-const MainArticle = async ({article}:MainArticleProps) => {
+const MainArticle = ({article}:MainArticleProps) => {
   
     return (
         <div className="lg:w-[70%]">

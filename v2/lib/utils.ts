@@ -32,6 +32,10 @@ export const textShortener = (text: string, length?: number) => {
     return formattedText
 }
 
+export const generateDate = (date) => {
+    return date.split("T")[0]
+}
+
 export const generateSlug = (text: string) => {
     if (!text) {
         return

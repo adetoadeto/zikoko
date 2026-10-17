@@ -1,5 +1,3 @@
-import { cache } from "react"
-import { AddCategory } from "./interface-types"
 import Category from "@/models/category.model"
 
 export const getAllCategories = async () => {

@@ -47,9 +47,11 @@ export interface ContextType {
     categories: Record<string, any>[],
     selectedCategory: string,
     selectedSubCategory: Record<string, string>,
+    archiveSelection: Record<string, any>,
     storeCategories: (categories: Record<string, any>[]) => void,
     storeSelectedCategory: (slug: string) => void,
     storeSelectedSubCategory: (selectionId: string, selectionName: string, selectionIcon: string) => void,
+    storeArchiveSelection: (optionType: string, value: string | number) => void,
 }
 
 export interface ContextProviderProps {
@@ -88,7 +90,7 @@ export interface ReadDurationProps {
 }
 
 export interface RelatedArticlesProps {
-    relatedArticles: Record<string, any>[]
+    categoryId: string
 }
 
 export interface ScrollWrapperProps {
@@ -102,7 +104,7 @@ export interface SelectDropdownProps {
     heading: string,
     options: number[] | string[],
     onSelectOption: (optionType: string, value: string | number) => void,
-    selection: Record<string, string | number>,
+    selectedOption: string | number,
     extraStyles: string
 }
 

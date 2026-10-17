@@ -6,9 +6,11 @@ export const Context = createContext<ContextType>({
     categories: [],
     selectedCategory: "",
     selectedSubCategory: {},
+    archiveSelection: {},
     storeCategories: (categories) => { },
     storeSelectedCategory: (slug) => { },
     storeSelectedSubCategory: (selectionId, selectionName, selectionIcon) => { },
+    storeArchiveSelection: (optionType, value) => { }
 })
 
 const ContextProvider = ({ children, initialData }: ContextProviderProps) => {
@@ -19,6 +21,10 @@ const ContextProvider = ({ children, initialData }: ContextProviderProps) => {
         id: "",
         name: "",
         icon: ""
+    })
+    const [archiveSelection, setArchiveSelection] = useState({
+        category: "",
+        year: ""
     })
 
     const storeCategories = (categories: any) => {
@@ -33,13 +39,21 @@ const ContextProvider = ({ children, initialData }: ContextProviderProps) => {
         setSelectedSubCategory({ id: selectionId, name: selectionName, icon: selectionIcon })
     }
 
+    const storeArchiveSelection = (optionType: string, value: string | number) => {
+        setArchiveSelection((prevState) => {
+            return { ...prevState, [optionType]: value }
+        })
+    }
+
     const ctxValue = {
         categories,
         selectedCategory,
         selectedSubCategory,
+        archiveSelection,
         storeCategories,
         storeSelectedCategory,
         storeSelectedSubCategory,
+        storeArchiveSelection
     }
 
     return <Context.Provider value={ctxValue}>{children} </Context.Provider>

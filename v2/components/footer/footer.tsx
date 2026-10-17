@@ -19,7 +19,7 @@ const Footer = () => {
                     <p>Zikoko is a big cabal media brand</p>
                     <div className="flex flex-wrap items-center gap-4">
                         {socials.map(item =>
-                            <a href={item.href} target="_blank" className="h-8 w-8 rounded-full p-3 bg-white text-purple-950 flex items-center justify-center"><i className={`fa-brands fa-${item.icon}`}></i></a>
+                            <a key={item.icon} href={item.href} target="_blank" className="h-8 w-8 rounded-full p-3 bg-white text-purple-950 flex items-center justify-center"><i className={`fa-brands fa-${item.icon}`}></i></a>
                         )}
                     </div>
                 </div>

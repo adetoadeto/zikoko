@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { ArticleCardProps } from "@/lib/interface-types"
-import { generateSlug, textShortener } from "@/lib/utils"
+import { generateDate, generateSlug, textShortener } from "@/lib/utils"
 import ArticleTag from "./article-tag"
 import ReadDuration from "../read-duration"
 
@@ -9,7 +9,7 @@ const ArticleCard = ({ item, headlineLength, tag, useSubCategory, extraStyle }: 
     const shortenedHeadline = textShortener(item.headline, headlineLength)
     const headlineSlug = generateSlug(item.headline)
     const author = item.author.firstName + " " + item.author.lastName
-    const date = item.createdAt.split("T")[0]
+    const date = generateDate(item.createdAt)
     const tagName = useSubCategory ? item.subCategory.name : item.category.name
 
     return (

@@ -6,24 +6,14 @@ import SelectDropdown from "../select-dropdown"
 
 const Dropdowns = () => {
     const years = getYears()
-    const {categories} = useContext(Context)
-    const [selectedOptions, setSelectedOptions] = useState({
-        category: "",
-        year: ""
-    })
+    const ctx = useContext(Context)
 
-    const categoriesName =  categories.map(item => item.name)
-
-    const handleSelectedOption = (optionType: string, value: string | number) => {
-        setSelectedOptions(prevState => {
-            return { ...prevState, [optionType.toLowerCase()]: value }
-        })
-    }
+    const categoriesName =  ctx.categories.map(item => item.name)
 
     return (
         <div className="flex items-center gap-5 mt-3">
-            <SelectDropdown heading="Category" options={categoriesName} onSelectOption={handleSelectedOption} selection={selectedOptions} extraStyles="w-60" />
-            <SelectDropdown heading="Year" options={years} onSelectOption={handleSelectedOption} selection={selectedOptions} extraStyles="w-35"/>
+            <SelectDropdown heading="Category" options={categoriesName} onSelectOption={ctx.storeArchiveSelection} selectedOption={ctx.archiveSelection.category} extraStyles="w-60" />
+            <SelectDropdown heading="Year" options={years} onSelectOption={ctx.storeArchiveSelection} selectedOption={ctx.archiveSelection.year} extraStyles="w-35"/>
         </div>
     )
 }

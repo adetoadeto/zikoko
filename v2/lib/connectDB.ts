@@ -22,9 +22,10 @@ const connectDB = async () => {
 
     try {
         cached.conn = await cached.promise
-    } catch (err) {
+    } catch (err: any) {
         cached.promise = null
         console.log(err)
+        throw new Error(err.code)
     }
 
     return cached.conn;

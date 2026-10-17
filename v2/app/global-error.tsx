@@ -1,26 +1,22 @@
 "use client"
-import Image from "next/image"
-import Link from "next/link"
-import serverErrorImg from "@/public/500.png"
+import ServerErrorPage from "@/components/500-page";
+import NoInternetPage from "@/components/no-internet-page";
+import { fraunces, manrope, } from "@/lib/fonts";
 
-const GlobalErrorPage = ({error}: {error: Error}) => {
+const GlobalErrorPage = ({ error }: { error: Error }) => {
+
+  const noInternet = error.message === 'ECONNREFUSED'
+
   return (
-    <html>
-      <body>
-        <div className="flex flex-col items-center mt-10">
-          <div className="flex items-center justify-center">
-            <strong className="text-[19rem] text-purple-800">5</strong>
-            <Image src={serverErrorImg} alt="not-found-img" height={600} width={600} className="bg-contain" />
-            <strong className="text-[19rem] text-purple-800">0</strong>
-          </div>
-          <strong className="text-xl">
+    <html lang="en"
+      className={`${fraunces.variable} ${manrope.variable} h-full antialiased`}>
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+      </head>
+      <body className="min-h-screen overflow-x-hidden text-base text-neutral-800 font-body">
+        {noInternet ? <NoInternetPage /> : <ServerErrorPage />}
 
-            <span className="text-purple-600"> Server error! </span>
-            not to worry,
-            <span className="text-purple-600"> we are on it! </span>
-          </strong>
-          <Link href="/" className="bg-purple-600 text-white  py-2 px-4 rounded-lg font-semibold mt-7 text-lg flex items-center gap-2"><i className="fa-regular fa-house"></i> <span>Return Home</span></Link>
-        </div>
+
       </body>
     </html>
 
