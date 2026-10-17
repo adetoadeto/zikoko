@@ -9,7 +9,7 @@ const Latest = async () => {
     return (
         <HorizontalScrollWrapper heading="Latest" icon="fire-flame-curved">
             {latestArticles?.map(item =>
-                <ArticleCard key={item.title} item={item} tag={true}/>
+                <ArticleCard key={item._id} item={item} tag={true}/>
             )}
         </HorizontalScrollWrapper>
     )

@@ -15,7 +15,7 @@ const ServerErrorPage = () => {
                 <span>not to worry, </span>
                 <span className="text-purple-600"> we are on it! </span>
             </strong>
-              <RefreshButton />
+              <RefreshButton/>
         </div>
     )
 }

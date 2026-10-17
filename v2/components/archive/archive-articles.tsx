@@ -6,7 +6,7 @@ import ArticleCard from "../article/article-card"
 import SubHeading from "../sub-heading"
 
 const ArchiveArticles = () => {
-    const [articles, setArticles] = useState([])
+    const [articles, setArticles] = useState<Record<string, string | any>[] | null>([])
     const ctx = useContext(Context)
     const archiveSelection = ctx.archiveSelection
 
@@ -26,13 +26,13 @@ const ArchiveArticles = () => {
 
     return (
         <>
-            {articles.length === 0 ? <p className="text-center text-xl font-bold">No article available for the selected year</p> :
-            <div>
-                <SubHeading title={archiveSelection.category} icon="folder-open" />
-                <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-x-5 gap-y-6 h-fit mt-6">
-                    {articles.map(item => <ArticleCard item={item} headlineLength={45} />)}
+            {articles?.length === 0 ? <p className="text-center text-xl font-bold">No article available for the selected year</p> :
+                <div>
+                    <SubHeading title={archiveSelection.category} icon="folder-open" />
+                    <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-x-5 gap-y-6 h-fit mt-6">
+                        {articles?.map(item => <ArticleCard key={item._id} item={item} headlineLength={45} />)}
+                    </div>
                 </div>
-            </div>
             }
         </>
     )

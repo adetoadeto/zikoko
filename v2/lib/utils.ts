@@ -32,7 +32,7 @@ export const textShortener = (text: string, length?: number) => {
     return formattedText
 }
 
-export const generateDate = (date) => {
+export const generateDate = (date:string) => {
     return date.split("T")[0]
 }
 

@@ -13,7 +13,7 @@ const NoInternetPage = () => {
             <div className="sm:w-1/2 px-1 mt-4 sm:mt-0 flex flex-col items-center gap-5 text-center ">
                 <strong className="text-4xl/10 sm:text-5xl/14 tracking-wide font-heading text-purple-600 text-center">No Internet Connection!</strong>
                 <p className="sm:w-[90%] leading-7.5 text-lg">Ensure you are connected to the internet.</p>
-                <RefreshButton />
+                <RefreshButton/>
             </div>
 
         </div>
