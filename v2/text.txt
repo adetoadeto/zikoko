@@ -6,7 +6,8 @@ add overrall animation effect to page
 for latest shows in shows you can add the pause button and when clicked takes you to the show
 the more box should also fold in when closed and spread when opened (animation)
 improve accessibility
-
+optimized cloudinaryurl for faster image rendering
+loading effect 
 error handling e.g show not found where necessary
 
 

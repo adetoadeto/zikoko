@@ -8,7 +8,7 @@ const Shows = async () => {
 
     return (
         <HorizontalScrollWrapper heading="Zikoko Shows" icon="clapperboard" href="shows">
-            {shows?.map(item => <Link key={item._id} href={`categories/shows`} className="card-width hover:animate-shift">
+            {shows?.map(item => <Link key={item._id} href="/shows" className="card-width hover:animate-shift">
                 <div className="rounded-xl p-3 h-42.5 mb-2 flex flex-col justify-center bg-cover bg-right" style={{ backgroundImage: `url(${item.img})` }} >
                     <p className="w-1/2 wrap-break-word uppercase font-bold text-white text-lg">{item.headline}</p>
                 </div>
