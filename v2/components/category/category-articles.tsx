@@ -13,11 +13,11 @@ const CategoryArticles = () => {
         groupedArticles: [],
     })
 
-    const { categories, selectedCategory } = useContext(Context)
-    if (!categories) {
+    const ctx = useContext(Context)
+    if (!ctx.categories) {
         return
     }
-    const category = categories.find(item => item.link === selectedCategory)
+    const category = ctx.categories.find(item => item.link === ctx.selectedCategory)
     const categoryId = category?._id
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const CategoryArticles = () => {
 
     return (
         <div className="flex flex-col gap-10">
-            <CategoryArticlesLatest  latestArticles={articles.latestArticles}/>
+            <CategoryArticlesLatest latestArticles={articles.latestArticles}/>
             <CategoryArticlesGrouped groupedArticles={articles.groupedArticles} /> 
         </div>
     )

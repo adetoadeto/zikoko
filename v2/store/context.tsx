@@ -10,7 +10,8 @@ export const Context = createContext<ContextType>({
     storeCategories: (categories) => { },
     storeSelectedCategory: (slug) => { },
     storeSelectedSubCategory: (selectionId, selectionName, selectionIcon) => { },
-    storeArchiveSelection: (optionType, value) => { }
+    storeArchiveSelection: (optionType, value) => { },
+    clearSelectedSubCategory: () => { }
 })
 
 const ContextProvider = ({ children, initialData }: ContextProviderProps) => {
@@ -39,6 +40,14 @@ const ContextProvider = ({ children, initialData }: ContextProviderProps) => {
         setSelectedSubCategory({ id: selectionId, name: selectionName, icon: selectionIcon })
     }
 
+    const clearSelectedSubCategory = () => {
+        setSelectedSubCategory({
+            id: "",
+            name: "",
+            icon: "",
+        })
+    }
+
     const storeArchiveSelection = (optionType: string, value: string | number) => {
         setArchiveSelection((prevState) => {
             return { ...prevState, [optionType]: value }
@@ -53,6 +62,7 @@ const ContextProvider = ({ children, initialData }: ContextProviderProps) => {
         storeCategories,
         storeSelectedCategory,
         storeSelectedSubCategory,
+        clearSelectedSubCategory,
         storeArchiveSelection
     }
 

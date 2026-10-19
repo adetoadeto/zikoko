@@ -10,10 +10,10 @@ const CategoryBody = () => {
     const ctx = useContext(Context)
 
     return (
-        <div className="min-[480px]:pt-20 px-spacing-x-mobile xl:px-spacing-x">
+        <div className="min-[480px]:pt-20 px-spacing-x-mobile xl:px-spacing-x" id="explore">
             <CategoryNav />
             {!ctx.selectedSubCategory.id && <CategoryArticles />}
-            {ctx.selectedSubCategory && <SubCategoryPage />}
+            {ctx.selectedSubCategory.id && <SubCategoryPage />}
         </div>
     )
 }

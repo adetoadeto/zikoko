@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ContextProvider from "@/store/context";
-import connectDB from "@/lib/connectDB";
 import { fraunces, manrope, } from "@/lib/fonts";
 import { getAllCategories } from "@/lib/category";
 import Navbar from "@/components/nav/nav";
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = async ({ children }: LayoutProps<"/">) => {
-  await connectDB()
+ 
   const categories = await getAllCategories()
  
   return (

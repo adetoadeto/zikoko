@@ -39,6 +39,13 @@ export interface CategoryProps {
     selectedCategory: string
 }
 
+export interface CategoryNavItemProps {
+    text: string,
+    icon: string,
+    isActive: Boolean,
+    onClickHandler: React.MouseEventHandler<HTMLLIElement>
+}
+
 export interface ChildrenProps {
     children: React.ReactNode
 }
@@ -52,6 +59,7 @@ export interface ContextType {
     storeSelectedCategory: (slug: string) => void,
     storeSelectedSubCategory: (selectionId: string, selectionName: string, selectionIcon: string) => void,
     storeArchiveSelection: (optionType: string, value: string | number) => void,
+    clearSelectedSubCategory: () => void,
 }
 
 export interface ContextProviderProps {

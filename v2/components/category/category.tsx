@@ -2,9 +2,9 @@
 
 import { useContext, useEffect } from "react"
 import { Context } from "@/store/context"
+import { CategoryProps } from "@/lib/interface-types"
 import CategoryBanner from "./category-banner"
 import CategoryBody from "./category-body"
-import { CategoryProps } from "@/lib/interface-types"
 
 const Category = ({ selectedCategory }: CategoryProps) => {
 
@@ -13,6 +13,7 @@ const Category = ({ selectedCategory }: CategoryProps) => {
 
     useEffect(() => {
         ctx.storeSelectedCategory(selectedCategory)
+        ctx.clearSelectedSubCategory()
     }, [selectedCategory])
 
     let content;

@@ -6,10 +6,10 @@ const CategoryArticlesLatest = ({latestArticles}: CategoryArticlesType) => {
 
     return (
         <HorizontalScrollWrapper heading="Latest" icon="fire-flame-curved">
-            {latestArticles?.map(item => <ArticleCard key={item._id} item={item} tag={true} useSubCategory={true}/>
+            {latestArticles?.map(item => <ArticleCard key={item._id} item={item} tag={true} useSubCategory={true} headlineLength={32}/>
             )}
         </HorizontalScrollWrapper>
     )
-}
+}  
 
 export default CategoryArticlesLatest

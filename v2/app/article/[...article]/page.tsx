@@ -8,6 +8,7 @@ import MainArticle from "@/components/article/main-article/main-article"
 import NewsLetterBox from "@/components/newsletter/newsletter-box"
 import PageWrapper from "@/components/wrappers/page-wrapper"
 import RelatedArticles from "@/components/article/related-articles"
+import { notFound } from "next/navigation"
 
 export const generateMetadata = async ({ params }: Slug) => {
     const { article } = await params
@@ -15,7 +16,7 @@ export const generateMetadata = async ({ params }: Slug) => {
     const articleId = article[article.length - 1]
 
     if (!articleId) {
-        return
+        return notFound()
     }
     const currentArticle = await getArticleById(articleId)
     const capitalizedSlug = capitalizeSlug(currentArticle.headline)

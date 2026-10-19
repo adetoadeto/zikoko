@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Context } from "@/store/context"
 
 const CategoryBanner = () => {
-  const { categories, selectedCategory} = useContext(Context)
+  const { categories, selectedCategory } = useContext(Context)
   const isPartnerCategory = selectedCategory === "partners-announcements"
   const category = categories.find((item: any) => item.link === selectedCategory)
 
@@ -14,8 +14,9 @@ const CategoryBanner = () => {
         <h2 className="text-6xl/18 sm:text-7xl/20 font-heading uppercase">{category?.name}</h2>
         <p className="sm:w-2/3 leading-9">{category?.longDescription}.</p>
         <div className="flex flex-wrap items-center gap-5 font-semibold">
-          <button className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl border border-purple-400 px-4 py-2">Explore Articles</button>
-          <button className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl bg-yellow-300 px-4 py-2 text-black">{isPartnerCategory ? "Partner with us" : <Link href="/archive">Go to Archive</Link>}</button>
+          <Link href="#explore" className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl border border-purple-400 px-4 py-2 hover:bg-purple-50 hover:text-neutral-800 hover:cursor-pointer">
+            Explore {category?.name}</Link>
+          <button className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl bg-yellow-300 hover:bg-yellow-200 px-4 py-2 text-neutral-800 hover:cursor-pointer">{isPartnerCategory ? "Partner with us" : <Link href="/archive">Go to Archive</Link>}</button>
         </div>
       </div>
     </div>

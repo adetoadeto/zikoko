@@ -7,7 +7,7 @@ for latest shows in shows you can add the pause button and when clicked takes yo
 the more box should also fold in when closed and spread when opened (animation)
 improve accessibility
 
-if not connected to internet throw a seperate error/render a internet not connected page
+error handling e.g show not found where necessary
 
 
 
