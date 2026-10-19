@@ -18,7 +18,7 @@ const ArchiveArticles = () => {
         const fetchArticles = async () => {
             const result = await getArticlesByCategoryNameAndYear(archiveSelection.category, archiveSelection.year)
             setArticles(result)
-        }
+        } 
 
         fetchArticles()
 
@@ -30,7 +30,7 @@ const ArchiveArticles = () => {
                 <div>
                     <SubHeading title={archiveSelection.category} icon="folder-open" />
                     <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-x-5 gap-y-6 h-fit mt-6">
-                        {articles?.map(item => <ArticleCard key={item._id} item={item} headlineLength={45} />)}
+                        {articles?.map(item => <ArticleCard key={item._id} item={item} />)}
                     </div>
                 </div>
             }

@@ -16,7 +16,7 @@ const CategoryBanner = () => {
         <div className="flex flex-wrap items-center gap-5 font-semibold">
           <Link href="#explore" className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl border border-purple-400 px-4 py-2 hover:bg-purple-50 hover:text-neutral-800 hover:cursor-pointer">
             Explore {category?.name}</Link>
-          <button className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl bg-yellow-300 hover:bg-yellow-200 px-4 py-2 text-neutral-800 hover:cursor-pointer">{isPartnerCategory ? "Partner with us" : <Link href="/archive">Go to Archive</Link>}</button>
+          <button className="w-full min-[360px]:w-fit text-sm md:text-[16px] rounded-xl bg-yellow-300 hover:bg-yellow-200 px-4 py-2 text-neutral-800 hover:cursor-pointer">{isPartnerCategory ? <Link href="/partnership">Partner with us</Link> : <Link href="/archive">Go to Archive</Link>}</button>
         </div>
       </div>
     </div>

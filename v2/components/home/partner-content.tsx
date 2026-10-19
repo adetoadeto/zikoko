@@ -10,7 +10,7 @@ const PartnerContent = () => {
                 <p className="font-heading text-2xl md:text-3xl leading-normal font-semibold">Opportunities, products and services from brands we love.</p>
                 <div className="flex max-[400px]:flex-wrap gap-3 items-center">
                     <Link href="/partners-announcements" className="max-[400px]:w-full w-fit flex justify-between gap-2 items-center bg-white text-purple-800 font-semibold rounded-md px-3 py-1.5"><span>See what's new</span><i className="fa-solid fa-arrow-up rotate-45"></i></Link>
-                    <Link href="/" className="max-[400px]:w-full w-fit flex justify-between gap-2 items-center bg-purple-950 text-white font-semibold rounded-md py-1.5 px-3"><span>Partner with us</span><i className="fa-solid fa-handshake"></i></Link>
+                    <Link href="/partnership" className="max-[400px]:w-full w-fit flex justify-between gap-2 items-center bg-purple-950 text-white font-semibold rounded-md py-1.5 px-3"><span>Partner with us</span><i className="fa-solid fa-handshake"></i></Link>
                 </div>
             </div>
             <div className="hidden sm:block">

@@ -12,7 +12,7 @@ const Footer = () => {
     const {categories} = useContext(Context)
  
     return (
-        <footer className="w-full mt-8 px-spacing-x-mobile xl:px-spacing-x py-8 bg-purple-950 text-white">
+        <footer className="min-w-full mt-8 px-spacing-x-mobile xl:px-spacing-x py-8 bg-purple-950 text-white">
             <div className="flex flex-col sm:grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-10" >
                 <div className="flex flex-col gap-5">
                     <Image src={brandLogo} alt="zikoko logo" height={200} width={200} />
