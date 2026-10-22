@@ -2,7 +2,7 @@
 import { useContext } from "react"
 import { getYears } from "@/lib/utils"
 import { Context } from "@/store/context"
-import SelectDropdown from "../select-dropdown"
+import SelectDropdown from "../ui/select-dropdown"
 
 const Dropdowns = () => {
     const years = getYears()

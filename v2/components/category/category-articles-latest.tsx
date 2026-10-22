@@ -6,7 +6,7 @@ const CategoryArticlesLatest = ({latestArticles}: CategoryArticlesType) => {
 
     return (
         <HorizontalScrollWrapper heading="Latest" icon="fire-flame-curved">
-            {latestArticles?.map(item => <ArticleCard key={item._id} item={item} tag={true} useSubCategory={true} headlineLength={32}/>
+            {latestArticles?.map(item => <ArticleCard key={item._id} item={item} tag={true} useSubCategory={true}/>
             )}
         </HorizontalScrollWrapper>
     )

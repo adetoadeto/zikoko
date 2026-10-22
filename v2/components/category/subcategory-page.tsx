@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import ArticleCard from "../article/article-card"
-import SubHeading from "../sub-heading"
+import SubHeading from "../ui/sub-heading"
 import { Context } from "@/store/context"
 import { getArticlesBySubCategoryId } from "@/lib/article"
 

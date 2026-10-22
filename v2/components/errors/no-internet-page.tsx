@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import RefreshButton from './refresh-button'
-import noInternetImg from "@/public/disconnect.png"
+import RefreshButton from '../ui/refresh-button'
+import noInternetImg from "@/public/errors/disconnect.png"
 
 const NoInternetPage = () => {
     return (

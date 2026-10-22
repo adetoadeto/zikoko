@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import PageWrapper from "@/components/wrappers/page-wrapper"
-import notFoundImg from "@/public/404.png"
+import notFoundImg from "@/public/errors/404.png"
 
 const NotFoundPage = () => {
   return (

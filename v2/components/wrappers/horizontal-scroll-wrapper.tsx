@@ -1,5 +1,5 @@
 import { ScrollWrapperProps } from "@/lib/interface-types"
-import SubHeading from "../sub-heading"
+import SubHeading from "../ui/sub-heading"
 
 const HorizontalScrollWrapper = ({ heading, icon, href, children }: ScrollWrapperProps) => {
   return (

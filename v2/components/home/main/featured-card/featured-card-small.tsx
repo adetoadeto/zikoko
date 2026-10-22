@@ -1,18 +1,19 @@
-import Link from 'next/link'
 import { FeaturedCardProps } from '@/lib/interface-types'
 import { generateSlug } from '@/lib/utils'
+import Tagline from '@/components/ui/tagline'
+import Button from '@/components/ui/button'
 
-const FeaturedCardSmall = ({featured}: FeaturedCardProps) => {
+const FeaturedCardSmall = ({ featured }: FeaturedCardProps) => {
     const headlineSlug = generateSlug(featured.headline)
 
     return (
         <div className="min-[600px]:hidden w-full h-fit rounded-xl overflow-y-scroll no-scrollbar shadow-md mb-3">
             <div className="overflow-hidden relative h-50 pl-2 pt-3 bg-cover bg-top bg-no-repeat" style={{ backgroundImage: `url(${featured?.img})` }}>
-                  <div className="absolute w-fit flex items-center gap-2 py-1 md:py-2 px-2 md:px-3 rounded-full text-[9px] md:text-xs text-purple-600 bg-white font-semibold shadow"><i className="fa-solid fa-star text-amber-600 animate-pulse"></i><span className="uppercase font-bold">featured story</span></div>
-            </div> 
+                <Tagline text="featured story" icon="star" inverse={true} extraStyles="absolute" />
+            </div>
             <div className="h-fit px-2 py-3 flex flex-col gap-5 border-x border-b border-gray-300">
                 <h1 className="capitalize font-heading font-bold text-3xl/12">{featured.headline}</h1>
-                <Link href={`/article/${featured?.category.link}/${headlineSlug}`} className="w-fit font-heading font-bold rounded-button py-2 px-4 bg-purple-800 text-white hover:text-purple-700 flex items-center gap-3"><span>Read Story</span> <i className="fa-solid fa-arrow-right"></i></Link>
+                <Button href={`/article/${featured?.category.link}/${headlineSlug}/${featured._id}`} text="read story" icon="arrow-right" />
             </div>
         </div>
     )

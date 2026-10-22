@@ -26,6 +26,7 @@
     --animate-navlinks: slideIn 1s ease-in-out;
     --animate-shake: shake 2s linear infinite alternate;
     --animate-shift: shift 0.3s linear 2 alternate;
+      --animate-marquee: marquee 9s infinite linear;
     --animate-duration-transition: 3s;
 
     --scale-down: 95%;
@@ -49,6 +50,16 @@
 
 @utility card-width {
     min-width: 250px;
+}
+
+@keyframes marquee {
+    from {
+        translate: 0;
+    }
+
+    to {
+        translate: -100%;
+    }
 }
 
 @keyframes slideIn {

@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import { Context } from "@/store/context"
 import { getArticlesByCategoryNameAndYear } from "@/lib/article"
 import ArticleCard from "../article/article-card"
-import SubHeading from "../sub-heading"
+import SubHeading from "../ui/sub-heading"
 
 const ArchiveArticles = () => {
     const [articles, setArticles] = useState<Record<string, string | any>[] | null>([])

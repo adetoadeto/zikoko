@@ -9,7 +9,7 @@ const CategoryBanner = () => {
   const category = categories.find((item: any) => item.link === selectedCategory)
 
   return (
-    <div className="relative max-[480]:h-fit h-100 w-full bg-black/90 md:bg-transparent bg-blend-darken bg-cover bg-right md:bg-top mb-9" style={{ backgroundImage: `url(${category?.bannerImg})` }}>
+    <div className="relative max-[480]:h-fit h-100 w-full bg-black/80 md:bg-transparent bg-blend-darken bg-cover bg-right md:bg-top mb-9" style={{ backgroundImage: `url(${category?.bannerImg})` }}>
       <div className="h-full md:bg-transparent md:w-2/3 px-spacing-x-mobile py-5 md:px-spacing-x flex flex-col gap-7 justify-center items-center md:items-start text-white text-lg text-center md:text-start wrap-break-word">
         <h2 className="text-6xl/18 sm:text-7xl/20 font-heading uppercase">{category?.name}</h2>
         <p className="sm:w-2/3 leading-9">{category?.longDescription}.</p>

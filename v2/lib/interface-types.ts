@@ -30,6 +30,9 @@ export interface AuthorProps {
     author: Record<string, any>
 }
 
+export interface ButtonProps {
+    text: string, href: string, icon: string, inverse?: boolean, extraStyles?: string
+}
 export interface CategoryArticlesType {
     latestArticles?: Record<string, any>[] | null,
     groupedArticles?: Record<string, any>[] | null
@@ -88,6 +91,10 @@ export interface MainArticleContentProps {
     img: string
 }
 
+export interface MarqueeProps {
+    data: Record<string, any>[]
+}
+
 export interface NavLinkProps {
     href: string,
     name: string,
@@ -126,3 +133,22 @@ export interface Slug {
     params: Record<string, any>
 }
 
+export interface PartnershipCardProps {
+    icon: string,
+    heading: string,
+    content: string,
+    color: string
+}
+
+export interface PartnershipCardContainerProps {
+    data: Record<string, any>[],
+    heading: string
+}
+
+export interface PartnershipSubHeadingProps {
+    heading: string
+}
+
+export interface TaglineProps {
+    text: string, icon: string, inverse?: boolean, extraStyles?: string
+}

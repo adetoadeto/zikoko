@@ -1,6 +1,6 @@
 import Image from "next/image"
-import serverErrorImg from "@/public/500.png"
-import RefreshButton from "./refresh-button"
+import serverErrorImg from "@/public/errors/500.png"
+import RefreshButton from "../ui/refresh-button"
 
 const ServerErrorPage = () => {
     return (

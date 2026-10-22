@@ -1,6 +1,6 @@
 "use client"
-import ServerErrorPage from "@/components/500-page";
-import NoInternetPage from "@/components/no-internet-page";
+import ServerErrorPage from "@/components/errors/500-page";
+import NoInternetPage from "@/components/errors/no-internet-page";
 import { fraunces, manrope, } from "@/lib/fonts";
 
 const GlobalErrorPage = ({ error}: { error: Error}) => {

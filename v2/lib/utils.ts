@@ -19,7 +19,7 @@ export const textShortener = (text: string, length?: number) => {
         return
     }
 
-    const permittedLength = length ? length : 35
+    const permittedLength = length ? length : 100
     const textLength = text.length
     let formattedText;
 
