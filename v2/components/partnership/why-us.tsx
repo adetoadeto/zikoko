@@ -3,7 +3,7 @@ import CardContainer from "./card/card-container"
 
 const WhyUs = () => {
     return (
-        <CardContainer data={whyUs} heading="why us" />
+        <CardContainer data={JSON.parse(JSON.stringify(whyUs))} heading="why us" />
     )
 }
 

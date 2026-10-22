@@ -3,7 +3,7 @@ import CardContainer from "./card/card-container"
 
 const OurServices = () => {
   return (
-    <CardContainer data={ourServices} heading="What you can promote"/>
+    <CardContainer data={JSON.parse(JSON.stringify(ourServices))} heading="What you can promote"/>
   )
 }
 
