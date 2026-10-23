@@ -1,4 +1,4 @@
-import { TaglineProps } from "@/lib/interface-types"
+import { TaglineProps } from "../../lib/interface-types"
 
 const Tagline = ({ text, icon, inverse, extraStyles }: TaglineProps) => {
     const inverseColor = inverse && "text-purple-600 bg-white"
