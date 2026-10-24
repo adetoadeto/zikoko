@@ -1,4 +1,4 @@
-import { CategoryNavItemProps } from "@/lib/interface-types"
+import { CategoryNavItemProps } from "@/lib/interface"
 
 const CategoryNavItem = ({ text, icon, isActive, onClickHandler}: CategoryNavItemProps) => {
     const isActiveClass = "bg-purple-900 rounded-xl text-white"

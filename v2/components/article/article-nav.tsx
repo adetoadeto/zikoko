@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArticleNavProps, Color } from '@/lib/interface-types'
+import { ArticleNavProps, Color } from '@/lib/interface'
 import { colors } from '@/lib/colors'
 
 const ArticleNav = async ({ category }: ArticleNavProps) => {

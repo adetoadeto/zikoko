@@ -5,7 +5,7 @@ import CategoryArticlesLatest from "./category-articles-latest"
 import { CategoryArticlesGrouped } from "./category-articles-grouped"
 import { getArticlesByCategoryId } from "@/lib/article"
 import { groupCategoryArticlesBySubCategory } from "@/lib/utils"
-import { CategoryArticlesType } from "@/lib/interface-types"
+import { CategoryArticlesType } from "@/lib/interface"
 
 const CategoryArticles = () => {
     const [articles, setArticles] = useState<CategoryArticlesType>({

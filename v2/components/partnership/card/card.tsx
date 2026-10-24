@@ -1,5 +1,5 @@
 import CardIcon from "@/components/ui/card-icon"
-import {PartnershipCardProps} from "@/lib/interface-types"
+import {PartnershipCardProps} from "@/lib/interface"
 
 const Card = ({ icon, heading, content, color }: PartnershipCardProps) => {
 

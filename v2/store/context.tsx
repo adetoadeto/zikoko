@@ -1,6 +1,6 @@
 "use client"
 import { createContext, useState } from "react";
-import { ContextProviderProps, ContextType } from "@/lib/interface-types";
+import { ContextProviderProps, ContextType } from "@/lib/interface";
 
 export const Context = createContext<ContextType>({
     categories: [],

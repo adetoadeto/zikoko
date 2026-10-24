@@ -1,4 +1,4 @@
-import { ScrollWrapperProps } from '@/lib/interface-types'
+import { ScrollWrapperProps } from '@/lib/interface'
 import SubHeading from '../ui/sub-heading'
 
 const VerticalScrollWrapper = ({ heading, icon, href, children }: ScrollWrapperProps) => {

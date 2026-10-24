@@ -1,4 +1,4 @@
-import { SubHeadingProps } from "@/lib/interface-types"
+import { SubHeadingProps } from "@/lib/interface"
 
 const SubHeading = ({ title, icon }: SubHeadingProps) => {
    

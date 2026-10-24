@@ -1,5 +1,5 @@
 import { colors } from "@/lib/colors"
-import { Color } from "@/lib/interface-types"
+import { Color } from "@/lib/interface"
 
 const CardIcon = ({ icon, color }: { icon: string, color: string }) => {
   return (

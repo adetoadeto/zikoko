@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArticleCardProps } from "@/lib/interface-types"
+import { ArticleCardProps } from "@/lib/interface"
 import { generateDate, generateSlug, textShortener } from "@/lib/utils"
 import ArticleTag from "./article-tag"
 import ReadDuration from "../ui/read-duration"

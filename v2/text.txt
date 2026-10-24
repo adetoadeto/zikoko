@@ -1,4 +1,3 @@
-partner with us (advertise with us) has a dedicated page
 privacy policy page
 message generator
 add overrall animation effect to page
@@ -10,8 +9,44 @@ optimized cloudinaryurl for faster image rendering
 loading effect 
 error handling e.g show not found where necessary
 
+GAPS
+Home Page(issues)
+Landing page is overwhelming, no order of piority, thing are not structured
+navbar not properly structured. poor grouping of navitems
+top stories not clearly marked latest story, featured stories also not clearly marked
 
+fix
+display grouped contents based on order of piority. e,g moved our mission to the top as a dismissable modal
+proper structure of navbar, grouping of similiar elements into a category navbar for mobile devices
+latest stories grouped and clearly labeled as Latest in home page, featured story clearly market as featured
+elements displayed on home page are well grouped and categorized. visual layout is also based on order of piority e.g featured, categories (with a summary of what each category entails), latest, to keep users engaged
+partnership banner added with option to see partner;s content or partner with zikoko
+theadvertise with us and newsletter signup option is clearly visible in navbar across all devices
 
+category page
+difficult to read text over banner
+can;t filter articles based on subcategory
+
+fix: 
+good contrast between text and image in category banner
+options to view all articles in a subcategory or filter based on a subcatgory
+options to read all articles in a category from a specific year in the archives section
+
+archive page
+issue: difficulting in filtering for stories that go way back
+
+fix:a dedicated page for browsing through stories from previous years. dropdown boxes for selecting a category and desired year to filter from 
+
+partners page: 
+fix: lacked aesthetics, quite flat, just text
+a dedicated page that encourage brands to partner with zikoko, use of css keyframes to displays logos of trusted brands already in partnership with zikoko, categorized contents into groups with a clear header representing what each group represent, use of card to highlight the benefits of partnering with zikoko and the partnership options made available to brands, a call to action banner beneath to encourage sign up
+
+others:
+layouts and positioning of elements not properly otpimized across devices
+flat ui with no modern youthful vibrant feel
+
+fix: proper positioning and layouting of elements for optimal display across devices
+use of vibrant colors, corresponding images, icons, fonts, white spacing, animation effects to stimulate a modern and youthful  feel 
 
 
 

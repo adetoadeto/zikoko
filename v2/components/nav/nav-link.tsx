@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { NavLinkProps } from "../../lib/interface-types"
+import { NavLinkProps } from "../../lib/interface"
 
 const NavLink = ({ href, name }: NavLinkProps) => {
    const activePath = usePathname()

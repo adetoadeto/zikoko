@@ -1,5 +1,5 @@
 import { colors } from "@/lib/colors"
-import { ArticleTagProps, Color } from "@/lib/interface-types"
+import { ArticleTagProps, Color } from "@/lib/interface"
 
 const ArticleTag = ({ tagColor, tagName }: ArticleTagProps) => {
   return (

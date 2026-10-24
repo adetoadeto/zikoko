@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { MarqueeProps } from "@/lib/interface-types"
-import {partnersLogo} from "@/lib/partners"
+import { MarqueeProps } from "@/lib/interface"
+import { partnersLogo } from "@/lib/partners"
 import SubHeadingWrapper from "./subheading/sub-heading-wrapper"
 
 const TrustedBrands = () => {

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { AuthorProps } from "@/lib/interface-types"
+import { AuthorProps } from "@/lib/interface"
 
 const Author = ({author}: AuthorProps) => {
     const authorName = author.firstName + " " + author.lastName

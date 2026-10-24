@@ -1,5 +1,5 @@
 import { capitalizeSlug } from "@/lib/utils"
-import { Slug } from "@/lib/interface-types"
+import { Slug } from "@/lib/interface"
 import { getArticleById } from "@/lib/article"
 
 import ArticleNav from "@/components/article/article-nav"

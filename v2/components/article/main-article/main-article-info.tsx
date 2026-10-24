@@ -1,4 +1,4 @@
-import { MainArticleProps } from "@/lib/interface-types"
+import { MainArticleProps } from "@/lib/interface"
 import { generateDate } from "@/lib/utils"
 
 const MainArticleInfo = ({article}: MainArticleProps) => {

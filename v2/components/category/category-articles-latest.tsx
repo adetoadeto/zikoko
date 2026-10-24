@@ -1,4 +1,4 @@
-import { CategoryArticlesType } from "@/lib/interface-types"
+import { CategoryArticlesType } from "@/lib/interface"
 import ArticleCard from "../article/article-card"
 import HorizontalScrollWrapper from "../wrappers/horizontal-scroll-wrapper"
 

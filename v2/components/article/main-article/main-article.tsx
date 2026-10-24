@@ -1,4 +1,4 @@
-import { MainArticleProps } from "@/lib/interface-types"
+import { MainArticleProps } from "@/lib/interface"
 import MainArticleContent from "./main-article-content"
 import MainArticleHeader from "./main-article-header"
 

@@ -1,6 +1,6 @@
 import Card from "./card"
 import SubHeadingWrapper from "../subheading/sub-heading-wrapper"
-import {PartnershipCardContainerProps} from "@/lib/interface-types"
+import {PartnershipCardContainerProps} from "@/lib/interface"
 
 const CardContainer = ({ data, heading }: PartnershipCardContainerProps) => {
 

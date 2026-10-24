@@ -24,13 +24,26 @@ export interface BannerProps {
     slug: string
 }
 
+export interface ButtonProps {
+    text: string,
+    href: string,
+    icon: string,
+    inverse?: boolean,
+    extraStyles?: string
+}
+
+export interface CardIconProps {
+    icon: string,
+    color: string
+
+}
 export interface CategoryHeaderProps {
     subCategories: {
         text: string,
         icon: string
     }[],
     selectedSubCategory: string | any,
-    onSelectSubCategory: (selection: string, icon:string ) => void
+    onSelectSubCategory: (selection: string, icon: string) => void
 }
 
 export interface CategoryBodyProps {
@@ -39,8 +52,8 @@ export interface CategoryBodyProps {
 
 export interface CategoryOverviewProps {
     category: string,
-    groupedBySubCategory: GroupBySubCategory[]| undefined,
-    onSelectSubCategory: (selection: string, icon:string ) => void
+    groupedBySubCategory: GroupBySubCategory[] | undefined,
+    onSelectSubCategory: (selection: string, icon: string) => void
 }
 
 export interface ChildrenProps {
@@ -60,8 +73,8 @@ export interface FooterLinksProps {
 }
 
 export interface GroupBySubCategory {
-        heading: string,
-        articles: Record<string, string>[]
+    heading: string,
+    articles: Record<string, string>[]
 }
 
 export interface MainArticleHeaderProps {
@@ -72,9 +85,33 @@ export interface MainArticleContentProps {
     img: StaticImageData
 }
 
+export interface MarqueeProps {
+    data: Record<string, any>[]
+}
+
 export interface NavLinkProps {
     href: string,
     name: string,
+}
+
+export interface PartnershipCardContainerProps {
+    data: Record<string, any>[],
+    heading: string
+}
+
+export interface PartnershipCardProps {
+    icon: string
+    heading: string
+    content: string
+    color: string
+}
+
+export interface PartnershipSubHeadingWrapperProps {
+    heading: string
+}
+
+export interface PartnershipSubHeadingProps {
+    text: string
 }
 
 export interface ReadTimeProps {
@@ -93,8 +130,8 @@ export interface ScrollWrapperProps {
 }
 
 export interface SubCategoryPageProps {
-    selectedSubCategory: Record<string,string>,
-    groupedBySubCategory: GroupBySubCategory[]| undefined
+    selectedSubCategory: Record<string, string>,
+    groupedBySubCategory: GroupBySubCategory[] | undefined
 }
 
 export interface SubHeadingProps {
@@ -107,3 +144,14 @@ export interface Slug {
     params: Record<string, any>
 }
 
+export interface TaglineProps {
+    text: string,
+    icon?: string,
+    inverse?: boolean,
+    extraStyles?: string
+}
+
+export interface CardIconProps {
+    icon: string,
+    color: string
+}

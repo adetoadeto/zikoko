@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { Slug } from "@/lib/interface-types"
+import { Slug } from "@/lib/interface"
 import { getSpecificCategoryByLink } from "@/lib/category"
 import Category from "@/components/category/category"
 

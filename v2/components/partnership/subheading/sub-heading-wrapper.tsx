@@ -1,5 +1,5 @@
 import SubHeading from "./subheading"
-import { PartnershipSubHeadingProps } from "@/lib/interface-types"
+import { PartnershipSubHeadingProps } from "@/lib/interface"
 
 const SubHeadingWrapper = ({ heading }: PartnershipSubHeadingProps) => {
     return (

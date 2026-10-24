@@ -1,4 +1,4 @@
-import { MainArticleContentProps } from "@/lib/interface-types"
+import { MainArticleContentProps } from "@/lib/interface"
 
 const MainArticleContent = ({ img }: MainArticleContentProps) => {
     return (

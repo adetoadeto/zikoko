@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ButtonProps } from "@/lib/interface-types"
+import { ButtonProps } from "@/lib/interface"
 
 const Button = ({ text, href, icon, inverse, extraStyles }: ButtonProps) => {
     const inverseColor = 'border border-neutral-800 text-neutral-800 bg-white'

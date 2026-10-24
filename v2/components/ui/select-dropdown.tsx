@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { SelectDropdownProps } from "@/lib/interface-types"
+import { SelectDropdownProps } from "@/lib/interface"
 
 const SelectDropdown = ({ heading, options, onSelectOption, selectedOption, extraStyles }: SelectDropdownProps) => {
 

@@ -2,7 +2,7 @@
 import { useContext } from "react"
 import Link from "next/link"
 import { colors } from "@/lib/colors"
-import { Color } from "@/lib/interface-types"
+import { Color } from "@/lib/interface"
 import { Context } from "@/store/context"
 import HorizontalScrollWrapper from "../wrappers/horizontal-scroll-wrapper"
 import CardIcon from "../ui/card-icon"

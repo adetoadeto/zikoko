@@ -1,9 +1,8 @@
-import { PartnershipSubHeadingProps } from "@/lib/interface-types"
+import { PartnershipSubHeadingProps } from "@/lib/interface"
 
-const SubHeading = ({heading}: PartnershipSubHeadingProps) => {
+const SubHeading = ({ heading }: PartnershipSubHeadingProps) => {
     return (
-        <span className="block uppercase text-purple-700 tracking-wider font-semibold font-heading text-lg">{heading}</span>
-
+        <span className="block uppercase text-purple-700 tracking-wider font-semibold font-heading text-lg text-center">{heading}</span>
     )
 }
 

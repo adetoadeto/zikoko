@@ -1,4 +1,4 @@
-import { ChildrenProps } from "@/lib/interface-types"
+import { ChildrenProps } from "@/lib/interface"
 
 const NewsLetterButton = ({children}: ChildrenProps) => {
     return (

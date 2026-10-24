@@ -1,4 +1,4 @@
-import { CategoryArticlesType } from "@/lib/interface-types"
+import { CategoryArticlesType } from "@/lib/interface"
 import ArticleCard from "../article/article-card"
 import SubHeading from "../ui/sub-heading"
 

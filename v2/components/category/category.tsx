@@ -2,7 +2,7 @@
 
 import { useContext, useEffect } from "react"
 import { Context } from "@/store/context"
-import { CategoryProps } from "@/lib/interface-types"
+import { CategoryProps } from "@/lib/interface"
 import CategoryBanner from "./category-banner"
 import CategoryBody from "./category-body"
 

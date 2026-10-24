@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FooterLinksProps } from "../../lib/interface-types"
+import { FooterLinksProps } from "../../lib/interface"
 
 const FooterLinks = ({ categories, heading }: FooterLinksProps) => {
    

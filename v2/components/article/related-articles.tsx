@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { generateDate, generateSlug } from "@/lib/utils"
-import { RelatedArticlesProps } from "@/lib/interface-types"
+import { RelatedArticlesProps } from "@/lib/interface"
 import { getArticlesByCategoryId } from "@/lib/article"
 
 const RelatedArticles = async ({ categoryId }: RelatedArticlesProps) => {

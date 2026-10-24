@@ -1,4 +1,4 @@
-import { ReadDurationProps } from "@/lib/interface-types"
+import { ReadDurationProps } from "@/lib/interface"
 
 const ReadDuration = ({ time }: ReadDurationProps) => {
     return (

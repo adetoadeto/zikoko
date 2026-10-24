@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FeaturedCardProps } from "@/lib/interface-types"
+import { FeaturedCardProps } from "@/lib/interface"
 import { generateSlug } from "@/lib/utils"
 import Tagline from "@/components/ui/tagline"
 import Button from "@/components/ui/button"
