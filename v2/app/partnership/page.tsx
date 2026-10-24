@@ -4,6 +4,13 @@ import TrustedBrands from "@/components/partnership/trusted-brands"
 import WhyUs from "@/components/partnership/why-us"
 import GetStarted from "@/components/partnership/get-started"
 
+export const generateMetaTag = ()=> {
+    return {
+        title: "Advertise with us | Zikoko",
+        description: "Advertise with Zikoko"
+    }
+}
+
 const Partnership = () => {
     return (
         <section className="min-h-screen pt-spacing-t-mobile lg:pt-spacing-t flex flex-col gap-13">
